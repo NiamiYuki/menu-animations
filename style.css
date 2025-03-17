@@ -34,14 +34,16 @@
 
 .burger {
   display: flex;
-  width: 45px;
-  height: 45px;
+  width: 48px;
+  height: 48px;
   flex-direction: column;
   justify-content: space-between;
   position: relative;
   background: none;
   border: none;
   cursor: pointer;
+  -webkit-transition: -webkit-transform 0.3s linear;
+  transition: transform 0.3s linear, opacity 0.3s linear;
 }
 
 .rect {
@@ -52,8 +54,8 @@
   position: absolute;
   left: 0;
   background-color: var(--brown);
-  -webkit-transition: -webkit-transform 0.5s ease;
-  transition: transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear, opacity 0.5s linear;
 }
 .opened {
   background-color: var(--dark-beige);
@@ -64,17 +66,15 @@
 }
 
 .burger span:nth-child(2) {
-  top: 18px;
+  top: 20px;
 }
 
 .burger span:nth-child(3) {
-  top: 36px;
+  top: 40px;
 }
 
 .burger.open span:nth-child(1) {
-  transform: rotate(45deg);
-  top: 20px;
-  background-color: var(--red);
+  transform: rotate(45deg) translateY(14px) translateX(14px);;
 }
 
 .burger.open span:nth-child(2) {
@@ -82,7 +82,9 @@
 }
 
 .burger.open span:nth-child(3) {
-  transform: rotate(-45deg);
-  top: 20px;
-  background-color: var(--red);
+    transform: rotate(-45deg) translateY(-14px) translateX(14px);
+}
+
+.rotated {
+    transform: rotate(180deg) 
 }
