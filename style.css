@@ -1,0 +1,54 @@
+:root {
+    --brown: brown;
+    --red: rgb(231, 76, 60);
+  }
+
+.container {
+    display: flex;
+    align-items: center; 
+    width: 100vw;
+    height: 100vh; 
+    justify-content: center;
+}
+
+.burger__flex {
+    display: flex;
+    justify-content: center;  
+    align-items: center;     
+}
+
+.burger__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger {
+    width: 50px;
+    color: var(--brown);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+rect {
+    transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+/* animation*/
+.rect-anim-1 {
+    transform: translateY(5px); 
+    transform: rotate(15deg);
+    fill: #FF6347; 
+}
+
+.rect-anim-2 {
+    transform: translateY(-5px); 
+    display: none;
+}
+
+.rect-anim-3 {
+    transform: scaleX(1.2); 
+    transform: rotate(-15deg);
+    fill: #32CD32; 
+}
