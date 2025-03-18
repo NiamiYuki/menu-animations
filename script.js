@@ -6,4 +6,7 @@ function onClick() {
     const background = document.querySelector('.container');
     background.classList.toggle('opened');
 
+    const leaves = document.querySelector('#leaves');
+    leaves.classList.toggle('none');
+
   }
