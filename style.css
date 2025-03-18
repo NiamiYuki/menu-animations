@@ -61,7 +61,7 @@
 }
 
 .burger span:nth-child(1) {
-  top: 0;
+  top: 5px;
 }
 
 .burger span:nth-child(2) {
@@ -69,11 +69,11 @@
 }
 
 .burger span:nth-child(3) {
-  top: 40px;
+  top: 35px;
 }
 
 .burger.open span:nth-child(1) {
-  transform: rotate(45deg) translateY(14px) translateX(14px);;
+  transform: rotate(45deg) translateY(10px) translateX(10px);;
 }
 
 .burger.open span:nth-child(2) {
@@ -81,7 +81,7 @@
 }
 
 .burger.open span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-14px) translateX(14px);
+    transform: rotate(-45deg) translateY(-10px) translateX(10px);
 }
 
 .rotated {
@@ -94,11 +94,11 @@
   transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
-span:nth-child(1):hover,
+/* span:nth-child(1):hover,
 span:nth-child(2):hover,
 span:nth-child(3):hover {
   transition-delay: 0.5s;
-}
+} */
 
 .none {
   visibility:hidden;
@@ -106,7 +106,11 @@ span:nth-child(3):hover {
 
 /* leaf animations */
 
-#leaves {position:relative;top:-50px;width:100%;text-align: right;}
+#leaves {
+  position:relative;
+  top:-50px;
+  text-align: right;
+}
 
 #leaves i {
     display: inline-block;
