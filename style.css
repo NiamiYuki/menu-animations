@@ -87,3 +87,9 @@
 .rotated {
     transform: rotate(360deg);
 }
+
+.open_burger span:nth-child(1),
+.open_burger span:nth-child(2),
+.open_burger span:nth-child(3) {
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+}
