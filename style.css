@@ -9,6 +9,7 @@
 .container {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
   -webkit-transition: background-color 1s linear;
   transition: background-color 1s linear;
 }
@@ -141,7 +142,7 @@
   right: 20px;
   background-color: var(--beige);
   color: var(--dark-beige);
-  transform: translateX(100%);
+  transform: translateX(120%);
   transition: transform var(--transform-speed) ease-out; 
 }
 
