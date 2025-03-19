@@ -138,15 +138,15 @@
   position: absolute;
   top: 75px;
   width: 200px;
-  right: 200px;
+  right: 20px;
   background-color: var(--beige);
   color: var(--dark-beige);
   transform: translateX(100%);
-  transition: transform var(--transform-speed) linear;
+  transition: transform var(--transform-speed) ease-out; 
 }
 
-.menu__burger_button .open .menu__popup {
-  transform: translateX(0);
+.menu__burger_button.open ~ .menu__popup {
+  transform: translateX(0); 
 }
 
 .menu__list {
