@@ -1,7 +1,7 @@
 function onClick() {
-  const burger = document.querySelector('.menu__burger_button');
+  const burger = document.querySelector('.header__burger_button');
   const background = document.querySelector('.container');
-  const menuPopup = document.querySelector('.menu__popup'); 
+  const menuPopup = document.querySelector('.header__popup'); 
 
     if (menuPopup.classList.contains('hidden')) {
       menuPopup.classList.remove('hidden');
@@ -14,7 +14,7 @@ function onClick() {
 }
 
 function closeMenu() {
-  const burger = document.querySelector('.menu__burger_button');
+  const burger = document.querySelector('.header__burger_button');
   const background = document.querySelector('.container');
 
   burger.classList.remove('open');
