@@ -9,9 +9,9 @@
 .container {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
   -webkit-transition: background-color 1s linear;
   transition: background-color 1s linear;
+  overflow-x: hidden;
 }
 
 .menu__block {

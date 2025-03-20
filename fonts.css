@@ -1,35 +1,32 @@
 /* Rubik font */
 
 @font-face {
-    font-display: swap;
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 400;
-    src: url('./fonts/Rubik/Rubik-Regular.woff2') format('woff2'),
-         url('./fonts/Rubik/Rubik-Regular.woff') format('woff');
-  }
-  
-  @font-face {
-    font-display: swap;
-    font-family: 'Rubik';
-    font-style: normal;
-    font-weight: 300;
-    src: url('./fonts/Rubik/Rubik-Light.woff2') format('woff2'),
-         url('./fonts/Rubik/Rubik-Light.woff') format('woff');
-  }
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./fonts/Rubik/Rubik-Regular.woff2") format("woff2"), url("./fonts/Rubik/Rubik-Regular.woff") format("woff");
+}
 
-  :root {
-    --text-font: 'Rubik', sans-serif;
+@font-face {
+  font-display: swap;
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./fonts/Rubik/Rubik-Light.woff2") format("woff2"), url("./fonts/Rubik/Rubik-Light.woff") format("woff");
+}
 
-    --desc-text-color: #72aa29;
-  }
-  
+:root {
+  --text-font: "Rubik", sans-serif;
 
-  .menu_font {
-    font-family: var(--text-font);
-    font-size: 16px;
-    font-weight: 300;
-    letter-spacing: 0px;
-    text-align: center;
-    color: var(--desc-text-color);
-  }
+  --desc-text-color: #72aa29;
+}
+
+.menu_font {
+  font-family: var(--text-font);
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 0px;
+  text-align: center;
+  color: var(--desc-text-color);
+}
