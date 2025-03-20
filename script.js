@@ -1,6 +1,6 @@
 function onClick() {
   const burger = document.querySelector('.header__burger_button');
-  const background = document.querySelector('.container');
+  const background = document.querySelector('.header');
   const menuPopup = document.querySelector('.header__popup'); 
 
     if (menuPopup.classList.contains('hidden')) {
@@ -15,7 +15,7 @@ function onClick() {
 
 function closeMenu() {
   const burger = document.querySelector('.header__burger_button');
-  const background = document.querySelector('.container');
+  const background = document.querySelector('.header');
 
   burger.classList.remove('open');
   burger.classList.remove('rotated');

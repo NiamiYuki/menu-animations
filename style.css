@@ -7,11 +7,8 @@
 }
 
 .container {
-  width: 100vw;
-  height: 100vh;
-  -webkit-transition: background-color 1s linear;
-  transition: background-color 1s linear;
-  overflow-x: hidden;
+  width: 100%;
+  max-width: 1210px;
 }
 
 .header__block {
@@ -26,6 +23,8 @@
 
 .header {
   height: 100px;
+  -webkit-transition: background-color 1s linear;
+  transition: background-color 1s linear;
 }
 
 .header__logo svg {
