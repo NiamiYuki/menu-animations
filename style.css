@@ -30,6 +30,7 @@
 
 .header {
   position:fixed;
+  width: 100%;
   background-color: var(--white);
   -webkit-transition: background-color 1s linear;
   transition: background-color 1s linear;
@@ -191,6 +192,10 @@
 
 .main__block {
   padding: 50px;
+}
+
+.top {
+  height: 100px;
 }
 
 /* media 767px */
