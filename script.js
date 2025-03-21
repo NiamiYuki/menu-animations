@@ -1,24 +1,36 @@
-function onClick() {
-  const burger = document.querySelector('.header__burger_button');
-  const background = document.querySelector('.header');
-  const menuPopup = document.querySelector('.header__popup'); 
+const burger = document.querySelector(".header__burger_button");
+const header = document.querySelector(".header");
+const menuPopup = document.querySelector(".header__popup");
 
-    if (menuPopup.classList.contains('hidden')) {
-      menuPopup.classList.remove('hidden');
-    } 
- 
-  burger.classList.toggle('open');
-  burger.classList.toggle('rotated');
-  burger.classList.toggle('open_burger');
-  background.classList.toggle('opened');
+function toggleMenu() {
+  const classesToToggle = ["open", "rotated", "open_burger"];
+  
+  classesToToggle.forEach(cls => {
+    burger.classList.toggle(cls);
+  });
+  
+  header.classList.toggle("opened");
+  menuPopup.classList.toggle("active");
+  slideMenu();
 }
 
 function closeMenu() {
-  const burger = document.querySelector('.header__burger_button');
-  const background = document.querySelector('.header');
+  const classesToRemove = ["open", "rotated", "open_burger"];
+  
+  classesToRemove.forEach(cls => {
+    burger.classList.remove(cls);
+  });
+  
+  header.classList.remove("opened");
+  menuPopup.classList.remove("active");
+}
 
-  burger.classList.remove('open');
-  burger.classList.remove('rotated');
-  burger.classList.remove('open_burger');
-  background.classList.remove('opened');
+function slideMenu() {
+  const activeState = popup.classList.contains("active");
+  const keyframes = [{ right: activeState ? "0%" : "-100%" }, { right: activeState ? "-100%" : "0%" }];
+  menuPopup.animate(keyframes, {
+    duration: 300,
+    easing: "linear",
+  });
+  menuPopup.classList.toggle("active");
 }

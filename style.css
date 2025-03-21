@@ -6,10 +6,12 @@
   --transform-speed: 0.5s;
 }
 
+
 .container {
   width: 100%;
-  max-width: 1210px;
 }
+
+/*start header*/
 
 .header__block {
   padding: 10px;
@@ -31,8 +33,55 @@
   height: 70px;
 }
 
-.header__burger {
+.header__list {
   display: flex;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header__list li {
+  padding: 10px;
+}
+
+.header__list li a {
+  text-decoration: none;
+  color: var(--dark-beige);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.header__list li a:hover {
+  color: var(--highlight-color);
+}
+
+.header__list li:hover {
+  background-color: var(--light-green);
+  color: var(--beige);
+}
+
+.header__popup {
+  position: absolute;
+  top: 75px;
+  width: 200px;
+  right: 20px;
+  background-color: var(--beige);
+  color: var(--dark-beige);
+  opacity: 0;
+  transform: translateX(120%);
+  transition: opacity var(--transform-speed), 
+              transform var(--transform-speed) ease-out;
+  pointer-events: none;
+ }
+
+.header__popup.active {
+  opacity: 1; 
+  transform: translateX(0); 
+}
+
+.header__burger {
+  display: none;
   width: 70px;
   height: 70px;
   justify-content: center;
@@ -40,7 +89,14 @@
   position: relative;
   border-radius: 70px;
   background-color: var(--beige);
-  display: none;
+
+}
+.opened {
+  background-color: var(--dark-beige);
+}
+
+.rotated {
+  transform: rotate(360deg);
 }
 
 .header__burger_button {
@@ -69,8 +125,41 @@
   transition: transform var(--transform-speed) linear, opacity 0.3s linear;
 }
 
-.opened {
-  background-color: var(--dark-beige);
+.header__burger_button.open ~ .header__popup {
+  display: block;
+  transform: translateX(0);
+}
+
+.header__burger_list {
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.header__burger_list li {
+  padding: 10px;
+}
+
+.header__burger_list li a {
+  text-decoration: none;
+  color: var(--dark-beige);
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.header__burger_list li a:hover {
+  color: var(--highlight-color);
+}
+
+.header__burger_list li:hover {
+  background-color: var(--light-green);
+  color: var(--beige);
+}
+.open_burger span:nth-child(1),
+.open_burger span:nth-child(2),
+.open_burger span:nth-child(3) {
+  transition: transform var(--transform-speed) ease-in-out, opacity 1s ease-in-out;
 }
 
 .header__burger_button span:nth-child(1) {
@@ -97,89 +186,8 @@
   transform: rotate(-45deg) translateY(-11px) translateX(11px);
 }
 
-.rotated {
-  transform: rotate(360deg);
-}
 
-.open_burger span:nth-child(1),
-.open_burger span:nth-child(2),
-.open_burger span:nth-child(3) {
-  transition: transform var(--transform-speed) ease-in-out, opacity 1s ease-in-out;
-}
-
-.hidden {
-  visibility: hidden;
-}
-
-.header__main_list {
-  display: flex;
-  justify-content: space-between;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.header__main_list li {
-  padding: 0 10px;
-}
-
-.header__main_list li a {
-  text-decoration: none;
-  color: var(--dark-beige);
-  font-size: 18px;
-  transition: color 0.3s ease;
-}
-
-.header__main_list li a:hover {
-  color: var(--highlight-color);
-}
-
-.header__popup {
-  position: absolute;
-  top: 75px;
-  width: 200px;
-  right: 20px;
-  background-color: var(--beige);
-  color: var(--dark-beige);
-  transform: translateX(120%);
-  transition: transform var(--transform-speed) ease-out; 
-}
-
-.header__burger_button.open ~ .header__popup {
-  transform: translateX(0); 
-}
-
-.header__list {
-  list-style: none;
-  padding: 0;
-}
-
-.header__list li {
-  padding: 20px;
-}
-
-.header__list li:hover {
-  background-color: var(--light-green);
-  color: var(--beige);
-}
-
-.header__list li a {
-  text-decoration: none;
-  color: var(--menu-item-color);
-  font-size: 18px;
-  transition: transform var(--transform-speed);
-}
-
-.header__list li:hover {
-  background-color: var(--light-green);
-  color: var(--beige);
-}
-
-.header__list li a:hover {
-  color: var(--dark-beige);
-}
-
-/* 767px */
+/* media 767px */
 @media (max-width: 768px) {
   .header__burger {
     display: flex;
@@ -187,7 +195,7 @@
   .header__flex {
     justify-content: space-between;
   }
-  .header__main {
+  .header__navigation {
     display: none;
   }
 }
