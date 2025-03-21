@@ -72,7 +72,6 @@
   transform: translateX(120%);
   transition: opacity var(--transform-speed), 
               transform var(--transform-speed) ease-out;
-  pointer-events: none;
  }
 
 .header__popup.active {
