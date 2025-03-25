@@ -11,7 +11,6 @@ function toggleMenu() {
   
   header.classList.toggle("opened");
   menuPopup.classList.toggle("active");
-  slideMenu();
 }
 
 function closeMenu() {
@@ -25,12 +24,12 @@ function closeMenu() {
   menuPopup.classList.remove("active");
 }
 
-function slideMenu() {
-  const activeState = popup.classList.contains("active");
-  const keyframes = [{ right: activeState ? "0%" : "-100%" }, { right: activeState ? "-100%" : "0%" }];
-  menuPopup.animate(keyframes, {
-    duration: 300,
-    easing: "linear",
-  });
-  menuPopup.classList.toggle("active");
-}
+// function slideMenu() {
+//   const activeState = popup.classList.contains("active");
+//   const keyframes = [{ right: activeState ? "0%" : "-100%" }, { right: activeState ? "-100%" : "0%" }];
+//   menuPopup.animate(keyframes, {
+//     duration: 300,
+//     easing: "linear",
+//   });
+//   menuPopup.classList.toggle("active");
+// }
