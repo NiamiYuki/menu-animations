@@ -3,7 +3,7 @@ const header = document.querySelector(".header");
 const menuPopup = document.querySelector(".header__popup");
 
 function toggleMenu() {
-  const classesToToggle = ["open", "rotated", "open_burger"];
+  const classesToToggle = ["open", "rotated", "active"];
   
   classesToToggle.forEach(cls => {
     burger.classList.toggle(cls);
@@ -14,7 +14,7 @@ function toggleMenu() {
 }
 
 function closeMenu() {
-  const classesToRemove = ["open", "rotated", "open_burger"];
+  const classesToRemove = ["open", "rotated", "active"];
   
   classesToRemove.forEach(cls => {
     burger.classList.remove(cls);
